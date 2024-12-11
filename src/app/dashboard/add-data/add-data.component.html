@@ -1,0 +1,31 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <h2>Zum Kurs anmelden!</h2>
+<p>
+      <mat-form-field appearance="fill" type="input" formControlName="name">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Placeholder">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Geburtsdatum</mat-label>
+        <input matInput [matDatepicker]="picker"  formControlName="birthdate">
+        <mat-hint>TT/MM/JJJJ</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </p>
+    <p>
+    <mat-form-field formControlName="courseId">
+      <mat-label>Bitte auswählen</mat-label>
+      <mat-select>
+        <option *ngFor="let course of storeService.courses" [ngValue]="course.id">{{course.name}}, {{course.instructor}}</option>
+      </mat-select>
+    </mat-form-field>
+    </p>
+    <button type="submit" mat-raised-button>
+        <mat-icon>add</mat-icon>
+        Erfassen
+      </button>
+</form>

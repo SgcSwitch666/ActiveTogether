@@ -1,0 +1,25 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Node modules
+node_modules/
+
+# Build
+dist/
+out-tsc/
+.tmp/
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment
+src/environments/*.ts
+
+# Misc
+.DS_Store
+Thumbs.db

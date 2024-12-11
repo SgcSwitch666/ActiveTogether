@@ -1,0 +1,22 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+.mat-elevation-z4{
+    box-shadow: none !important;
+    padding: 0 !important;
+    background-color: #558739 !important;
+    color: white !important;
+  }
+  .no-border {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: transparent;
+  }
+  .logo {
+    width: 80px;
+    height: auto;
+    margin-right: 20px;
+  }
+ 
