@@ -87,6 +87,27 @@
       "courseId": "_iL775a",
       "birthdate": "1995-02-23",
       "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@test.at",
+      "courseId": "_iL775i",
+      "birthdate": "2024-12-09T23:00:00.000Z",
+      "id": 4
+    },
+    {
+      "name": "test",
+      "email": "test@test.at",
+      "courseId": "_iL775i",
+      "birthdate": "2024-12-09T23:00:00.000Z",
+      "id": 5
+    },
+    {
+      "name": "test",
+      "email": "test@test.at",
+      "courseId": "_iL775i",
+      "birthdate": "2024-12-09T23:00:00.000Z",
+      "id": 6
     }
   ]
 }

@@ -1,3 +1,15 @@
 button.active {
     background-color: orange;
+
 }
+.desktop-row-height {
+    height: 300px; /* Hier deine gewünschte Höhe */
+  }
+  
+  @media (min-width: 768px) {
+    .desktop-row-height {
+      display: flex;
+      align-items: center; /* Vertikale Zentrierung des Inhalts */
+    }
+  }
+  

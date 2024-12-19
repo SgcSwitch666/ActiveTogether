@@ -1,10 +1,27 @@
+<div class="form-style">
 <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <h2>Zum Kurs anmelden!</h2>
-<p>
-      <mat-form-field appearance="fill" type="input" formControlName="name">
+    <p>
+      <mat-form-field appearance="fill" type="input">
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Placeholder">
+        <input matInput formControlName="name" placeholder="Max Mustermann">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+          Name ist ein Pflichtfeld
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill" type="input">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" placeholder="beispiel@bsp.com">
+        <mat-icon matSuffix>mail</mat-icon>
+        <mat-error *ngIf="registrationForm.get('email')?.hasError('required')">
+          Email ist ein Pflichtfeld
+        </mat-error>
+        <mat-error *ngIf="registrationForm.get('email')?.hasError('email')">
+          Bitte gültige Mail eingeben
+        </mat-error>
       </mat-form-field>
     </p>
     <p>
@@ -14,18 +31,38 @@
         <mat-hint>TT/MM/JJJJ</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="registrationForm.get('birthdate')?.hasError('required')">
+          Geburtsdatum ist ein Pflichtfeld
+        </mat-error>
       </mat-form-field>
     </p>
     <p>
-    <mat-form-field formControlName="courseId">
+    <mat-form-field>
       <mat-label>Bitte auswählen</mat-label>
-      <mat-select>
-        <option *ngFor="let course of storeService.courses" [ngValue]="course.id">{{course.name}}, {{course.instructor}}</option>
+      <mat-select  formControlName="courseId">
+        <mat-option *ngFor="let course of storeService.courses" [value]="course.id">{{course.name}}, {{course.instructor}}</mat-option>
       </mat-select>
+      <mat-error *ngIf="registrationForm.get('courseId')?.hasError('required')">
+        Bitte Kurs auswählen
+      </mat-error>
     </mat-form-field>
     </p>
-    <button type="submit" mat-raised-button>
+    <p>
+      <mat-checkbox class="example-margin">Für Newsletter anmelden</mat-checkbox>
+    </p>
+    <button type="submit" mat-raised-button (click)="onSubmit()">
         <mat-icon>add</mat-icon>
         Erfassen
       </button>
 </form>
+</div>
+<div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1055;">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Anmeldung erfolgreich!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
