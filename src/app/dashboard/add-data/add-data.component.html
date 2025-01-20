@@ -4,9 +4,9 @@
     <p>
       <mat-form-field appearance="fill" type="input">
         <mat-label>Vorname</mat-label>
-        <input matInput formControlName="name" placeholder="Max Mustermann">
+        <input matInput formControlName="vorname" placeholder="Max">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+        <mat-error *ngIf="registrationForm.get('vorname')?.hasError('required')">
           Vorname ist ein Pflichtfeld
         </mat-error>
       </mat-form-field>
@@ -14,7 +14,7 @@
     <p>
       <mat-form-field appearance="fill" type="input">
         <mat-label>Nachname</mat-label>
-        <input matInput formControlName="name" placeholder="Max Mustermann">
+        <input matInput formControlName="name" placeholder="Mustermann">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
           Nachname ist ein Pflichtfeld

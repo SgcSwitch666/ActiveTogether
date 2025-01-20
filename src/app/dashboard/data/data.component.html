@@ -39,16 +39,36 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
             <th>Geburtsdatum</th>
             <th>Kurs</th>
+            <th>Anmeldedatum
+              <button (click)="toggleSortOrder()" class="btn btn-link">
+                <span *ngIf="sortOrder === 'asc'">↑</span>
+                <span *ngIf="sortOrder === 'desc'">↓</span>
+             </button>
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let registration of storeService.registrations">
+          <tr *ngFor="let registration of sortedRegistrations" class="position-relative">
+            <td>{{ registration.vorname }}</td>
             <td>{{ registration.name }}</td>
-            <td>{{ registration.birthdate }}</td>
+            <td>{{ registration.birthdate | date: 'dd.MM.yyyy' }}</td>
             <td>{{ registration.course.name }}</td>
+            <td>{{ registration.registrationDate | date: 'MMM dd, yyyy' }}</td>
+            <td class="text-end">
+            <button class="btn btn-danger" 
+            *ngIf="!loadingMap[+registration.id]"            
+            (click)="cancelRegistration(registration.id)">
+              Abmelden
+            </button>
+            <mat-spinner *ngIf="loadingMap[+registration.id]" diameter="20"></mat-spinner>
+          </td>
+          <td colspan="5" *ngIf="loadingMap[+registration.id]" class="loading-overlay">
+            <mat-spinner diameter="30"></mat-spinner>
+          </td>
           </tr>
         </tbody>
       </table>

@@ -71,112 +71,37 @@
   ],
   "registrations": [
     {
-      "id": 1,
-      "name": "Testuser",
-      "birthdate": "2024-11-13",
-      "courseId": "_iL775j"
-    },
-    {
-      "name": "Julia Schabasser",
-      "courseId": "_iL775i",
-      "birthdate": "1995-02-23",
-      "id": 2
-    },
-    {
-      "name": "Julia Schabasser",
-      "courseId": "_iL775a",
-      "birthdate": "1995-02-23",
-      "id": 3
-    },
-    {
-      "name": "test",
+      "name": "Test",
       "email": "test@test.at",
       "courseId": "_iL775i",
-      "birthdate": "2024-12-09T23:00:00.000Z",
-      "id": 4
-    },
-    {
-      "name": "test",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2024-12-09T23:00:00.000Z",
-      "id": 5
-    },
-    {
-      "name": "test",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2024-12-09T23:00:00.000Z",
-      "id": 6
-    },
-    {
-      "name": "test",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2025-01-16T23:00:00.000Z",
-      "id": 7
-    },
-    {
-      "name": "test",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2025-01-16T23:00:00.000Z",
-      "id": 8
-    },
-    {
-      "name": "testt",
-      "email": "test@test.at",
-      "courseId": "_iL775a",
-      "birthdate": "2025-01-13T23:00:00.000Z",
-      "id": 9
-    },
-    {
-      "name": "testt",
-      "email": "test@test.at",
-      "courseId": "_iL775a",
-      "birthdate": "2025-01-13T23:00:00.000Z",
-      "id": 10
-    },
-    {
-      "name": "testt",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
-      "id": 11
-    },
-    {
-      "name": "testt",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
-      "id": 12
-    },
-    {
-      "name": "testt",
-      "email": "test@test.at",
-      "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
+      "birthdate": "2025-01-09T23:00:00.000Z",
+      "registrationDate": "2025-01-20T19:33:06.621Z",
       "id": 13
     },
     {
-      "name": "testt",
+      "name": "Test",
       "email": "test@test.at",
       "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
+      "birthdate": "2025-01-09T23:00:00.000Z",
+      "registrationDate": "2025-01-20T19:33:06.624Z",
       "id": 14
     },
     {
-      "name": "testt",
+      "vorname": "vn",
+      "name": "nn",
       "email": "test@test.at",
       "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
+      "birthdate": "2025-01-09T23:00:00.000Z",
+      "registrationDate": "2025-01-20T20:32:12.495Z",
       "id": 15
     },
     {
-      "name": "testt",
+      "vorname": "vn",
+      "name": "nn",
       "email": "test@test.at",
       "courseId": "_iL775i",
-      "birthdate": "2025-01-13T23:00:00.000Z",
+      "birthdate": "2025-01-09T23:00:00.000Z",
+      "registrationDate": "2025-01-20T20:32:12.497Z",
       "id": 16
     }
   ]

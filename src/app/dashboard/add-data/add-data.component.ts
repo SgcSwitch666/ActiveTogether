@@ -48,6 +48,7 @@ export class AddDataComponent implements OnInit {
 
 
     this.registrationForm = this.formbuilder.group({
+      vorname: ['', [Validators.required]],
       name: ['', [Validators.required]],
       email: ['',[Validators.required, Validators.email]],
       courseId: ['', [Validators.required]],
