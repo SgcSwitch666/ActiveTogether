@@ -3,11 +3,21 @@
     <h2>Zum Kurs anmelden!</h2>
     <p>
       <mat-form-field appearance="fill" type="input">
-        <mat-label>Name</mat-label>
+        <mat-label>Vorname</mat-label>
         <input matInput formControlName="name" placeholder="Max Mustermann">
         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
-          Name ist ein Pflichtfeld
+          Vorname ist ein Pflichtfeld
+        </mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="fill" type="input">
+        <mat-label>Nachname</mat-label>
+        <input matInput formControlName="name" placeholder="Max Mustermann">
+        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+        <mat-error *ngIf="registrationForm.get('name')?.hasError('required')">
+          Nachname ist ein Pflichtfeld
         </mat-error>
       </mat-form-field>
     </p>

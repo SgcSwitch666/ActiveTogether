@@ -1,15 +1,28 @@
-button.active {
-    background-color: orange;
-
+.btn-primary {
+    background-color: rgb(73, 119, 75);
+    border-color: rgb(73, 119, 75);
 }
+
+.btn-inactive {
+  background-color: rgb(209, 209, 209);
+  color: white;
+  border-color: rgb(209, 209, 209);
+}
+
+
 .desktop-row-height {
-    height: 300px; /* Hier deine gewünschte Höhe */
+    height: 300px; 
   }
   
   @media (min-width: 768px) {
     .desktop-row-height {
       display: flex;
-      align-items: center; /* Vertikale Zentrierung des Inhalts */
+      align-items: center;
     }
   }
+
+  .table-spacing {
+    margin-top: 40px;
+  }
+
   

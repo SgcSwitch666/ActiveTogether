@@ -33,8 +33,8 @@
       </table>
     </div>
   </div>
-  
-  <div class="row justify-content-center align-items-center desktop-row-height mt-4">
+  <br>
+  <div class="row justify-content-center align-items-center desktop-row-height mt-5 table-spacing" style="margin-top: 50px;">
     <div class="col-12 col-md-10">
       <table class="table table-striped">
         <thead>
@@ -55,17 +55,20 @@
     </div>
   </div>
 
-  <div class="row justify-content-center align-items-center mt-4">
-    <div class="col-12 col-md-10 text-center">
-      <button
-        class="btn btn-primary m-2"
-        [ngClass]="page == storeService.currentPage ? 'active' : ''"
-        (click)="selectPage(page)"
-        type="button"
-        *ngFor="let page of returnAllPages()"
-      >
-        {{ page }}
-      </button>
-    </div>
+<div class="row justify-content-center align-items-center mt-4">
+  <div class="col-12 col-md-10 text-center">
+    <button
+      class="btn m-2"
+      [ngClass]="{
+        'btn-primary': page == storeService.currentPage,
+        'btn-inactive': page != storeService.currentPage
+      }"
+      (click)="selectPage(page)"
+      type="button"
+      *ngFor="let page of returnAllPages()"
+    >
+      {{ page }}
+    </button>
   </div>
 </div>
+

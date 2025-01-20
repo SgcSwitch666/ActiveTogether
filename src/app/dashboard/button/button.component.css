@@ -1,0 +1,10 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .custom-button {
+    margin: 16px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
